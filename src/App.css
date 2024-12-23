@@ -42,13 +42,14 @@
 }
 
 .gambar-sampah{
+  z-index: 1;
   background-image: url('./images/sampah_organik.jpg');
   width: 900px;
   border-Radius: 10px;
   box-Shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-repeat: repeat;
   background-size: cover;
-  transform: translateY(-20%);
+  transform: translateY(-10%);
 }
 
 .gambar-mobil{
@@ -58,7 +59,7 @@
   box-Shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-repeat: repeat;
   background-size: cover;
-  transform: translateY(-20%);
+  transform: translateY(-10%);
 }
 
 @media only screen and (max-width: 942px) {
@@ -70,5 +71,11 @@
 @media only screen and (max-width: 672px) {
   .gambar-sampah, .gambar-mobil {
     width: 45vh;
+  }
+}
+@media only screen and (max-width: 418px) {
+  .gambar-sampah, .gambar-mobil {
+    width: 30vh;
+    transform: translateY(-5%);
   }
 }

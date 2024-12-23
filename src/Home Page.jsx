@@ -25,7 +25,7 @@ const App = () => {
             </Modal.Header>
             <Modal.Body>
               <p>
-              Trashify, aplikasi berbasis AI yang dirancang untuk membantu Anda memilah sampah secara cerdas dan efisien. Dengan teknologi pengenalan gambar, aplikasi ini mampu membedakan antara sampah organik dan anorganik hanya dengan memindai gambar. Sampah organik seperti sisa makanan dan dedaunan dapat didaur ulang menjadi kompos, sementara sampah anorganik seperti plastik dan logam dapat dikelola dengan lebih baik untuk mendukung proses daur ulang.
+              Trashify, aplikasi berbasis website Ai yang dirancang untuk membantu Anda memilah sampah secara cerdas dan efisien. Dengan teknologi pengenalan gambar, aplikasi ini mampu membedakan antara sampah organik dan anorganik hanya dengan memindai gambar. Sampah organik seperti sisa makanan dan dedaunan dapat didaur ulang menjadi kompos, sementara sampah anorganik seperti plastik dan logam dapat dikelola dengan lebih baik untuk mendukung proses daur ulang.
               <br></br>
               <br></br>
               Misi kami adalah memberikan solusi teknologi yang ramah lingkungan untuk mengurangi pencemaran dan meningkatkan kesadaran masyarakat tentang pentingnya pengelolaan sampah yang benar. Dengan menggunakan Trashify, Anda tidak hanya memudahkan diri sendiri, tetapi juga berkontribusi pada pelestarian lingkungan untuk generasi mendatang.
@@ -95,10 +95,10 @@ const App = () => {
           Gunakan teknologi AI untuk membantu memilah sampah menjadi organik dan anorganik. Bersama, kita dapat menjaga lingkungan lebih bersih dan ramah lingkungan. Mulai sekarang, pilah sampah dengan mudah dan efisien.
         </p>
         <div>
-       <a href="#scan">
+       <a href="#scan" style={{zIndex:"99999"}}>
           <button className="btn btn-primary m-2"  style={{width: "150px", height: "60px", fontSize: "17px", color:"black", backgroundColor: "white" } }>MULAI</button>
           </a>  
-          <Button variant="primary" onClick={() => setModalShow(true)} className="btn btn-outline-light m-2" style={{width: "150px", height: "60px", fontSize: "17px", color:"white", backgroundColor: 'rgba(52, 52, 52, 0.8)'}}>
+          <Button variant="primary" onClick={() => setModalShow(true)} className="btn btn-outline-light m-2" style={{width: "150px", height: "60px", fontSize: "17px", color:"white", backgroundColor: 'rgba(52, 52, 52, 0.8)', zIndex:"99999"}}>
             Info Detail
             </Button>
             <MyVerticallyCenteredModal
@@ -116,6 +116,7 @@ const App = () => {
           justifyContent: "center",
           padding: "-20px",
           gap: "40px",
+          zIndex:"-999"
         }}
       >
         <div
@@ -137,15 +138,17 @@ const App = () => {
       <section id="scan" className="col-12" style={{ padding: "140px 5%", textAlign:"left", maxWidth:"6000px"}}>
         <h2 style={{  fontSize:"35px" }}><b>Pindai Sampah Anda dengan Mudah</b></h2>
         <p style={{  margin: "0 auto", textAlign:"left", fontSize:"22px" }}>
-          Gunakan fitur pemindaian untuk mengidentifikasi jenis sampah Anda dalam hitungan detik. Unggah atau ambil foto sampah Anda, dan biarkan teknologi AI kami bekerja untuk menentukan apakah itu sampah organik atau anorganik. Dengan cara ini, Anda dapat membantu memilah sampah dengan benar dan mendukung pengelolaan limbah yang lebih baik.
+          Gunakan fitur pemindaian untuk mengidentifikasi jenis sampah Anda dalam hitungan detik. ambil foto sampah Anda, dan biarkan teknologi AI kami bekerja untuk menentukan apakah itu sampah organik atau anorganik. Dengan cara ini, Anda dapat membantu memilah sampah dengan benar dan mendukung pengelolaan limbah yang lebih baik.
           Fitur ini dirancang untuk memudahkan pengguna dalam mengenali jenis sampah mereka. Dengan menggunakan teknologi kecerdasan buatan (AI), aplikasi dapat secara cepat dan akurat mengidentifikasi apakah sampah tersebut termasuk kategori organik (misalnya, sisa makanan atau dedaunan) atau anorganik (seperti plastik atau logam).
           <br></br>
           <br></br>
-          Pengguna hanya perlu mengambil foto sampah menggunakan kamera perangkat atau mengunggah gambar dari galeri. Dalam beberapa detik, hasil pemindaian akan muncul, lengkap dengan kategori sampah dan saran pengelolaan.
+          Pengguna hanya perlu mengambil foto sampah menggunakan kamera perangkat. Dalam beberapa detik, hasil pemindaian akan muncul, lengkap dengan kategori sampah dan saran pengelolaan.
+          <br></br>
+           <b>*Disarankan pengunaan melalui kamera ponsel*</b>
         </p>
         
         <button style={{width:"34vh", height:"6vh", fontSize:"20px"}} className="btn btn-dark mt-4 bi bi-camera" onClick={() => window.location.href = "https://deteksi-sampah.vercel.app/"}
-        >Telusuri sampah Anda</button>
+        >Pindai sampah Anda</button>
       </section>
 
       {/* Benefits Section */}
@@ -203,8 +206,11 @@ const App = () => {
         <h2 style={{fontWeight:"bold"}}>Kontak Lebih Lanjut</h2>
         <p style={{  margin: "0 auto",  textAlign: "left", fontSize:"22px" }}>
           Kami selalu senang mendengar dari Anda! Jika Anda memiliki pertanyaan, saran, atau ingin bekerja sama dalam inisiatif pengelolaan sampah, jangan ragu untuk menghubungi kami.
+          <br></br>
+          <br></br>
+          kami menyediakan layanan penjemputan sampah yang telah dipilah melalui kontak dibawah ini
         </p>
-        <button style={{width:"34vh", height:"6vh", fontSize:"20px"}} className="btn btn-dark mt-3">Kontak Kami</button>
+        <button style={{width:"34vh", height:"6vh", fontSize:"20px"}} className="btn btn-dark mt-3" onClick={() => window.location.href = "https://api.whatsapp.com/send/?phone=%2B628998714377&text&type=phone_number&app_absent=0"}>Kontak Kami</button>
       </section>
     </div>
   );
